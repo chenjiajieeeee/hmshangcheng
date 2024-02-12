@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: cart-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 121.199.173.232:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-jbdc.yaml
+          - data-id: shared-log.yaml
+          - data-id: shared-swagger.yaml
+
+# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
